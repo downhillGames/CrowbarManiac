@@ -1,0 +1,16 @@
+{
+  "kind": 0,
+  "closed": false,
+  "precision": 4,
+  "points": [
+    {"speed":100.0,"x":454.0,"y":341.0,},
+  ],
+  "parent": {
+    "name": "Paths",
+    "path": "folders/Paths.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "Mainianpath1",
+  "tags": [],
+  "resourceType": "GMPath",
+}
