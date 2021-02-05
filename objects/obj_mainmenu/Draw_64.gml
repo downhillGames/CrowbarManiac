@@ -5,6 +5,9 @@ draw_set_color(c_yellow);
 //draw_text(0,0, string(global.numb_of_clues) + " of 4 clues found");
 draw_text(683, 150, "Crowbar Maniac");
 
+draw_set_font(font_3);
+draw_text(683, 350, "Use arrow keys to highlight option, and 'Enter' to select.");
+
 draw_set_font(font_1);
 for (i = 0; i < array_length(button); i++){
 	

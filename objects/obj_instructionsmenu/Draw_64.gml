@@ -7,12 +7,21 @@ draw_text(683, 50, "Instructions");
 
 draw_set_font(font_3);
 draw_text(683, 200, "You've been framed for murder and the real killer is on the loose!");
-draw_text(683, 225, "Find all the clues to prove who the real crowbar killer is.");
-draw_text(683, 250, "Collect all the clues and take them to the police without being too suspicious");
-draw_text(683, 275, "Police finding you breaking into houses will raise your suspicion level");
-draw_text(683, 300, "Use the arrow key to walk and run in to clues to pick them up");
-draw_text(683, 325, "Avoid the killer at all costs until you can find enough evidence to lock him up");
-draw_text(683, 350, "He will strike again if he gets a chance!");
+draw_text(683, 225, "You need to find enough evidence to prove who the real Crowbar Maniac is before the police arrest you!");
+draw_text(683, 250, "Search the houses and rooms for any Clues that will prove your innocence.");
+draw_text(683, 275, "Once you've found enough evidence, turn it in to the police to ensure your freedom.");
+//draw_text(683, 300, " ");
+draw_text(683, 325, "Use the arrow keys to run, to avoid the police and the killer, and to collide with Clues to pick them up!");
+draw_text(683, 350, "You will have trackers at the top right of the screen to help you");
+draw_text(683, 375, "keep track of how many Clues you have collected, your Health, and your Suspicion level.");
+//draw_text(683, 400, " ");
+//draw_text(683, 250, "Collect all the clues and take them to the police to prove who the real killer is.");
+draw_text(683, 425, "Be careful of going into houses while the police are nearby, you may just catch their attention: " + "'!'" );
+draw_text(683, 450, "If Police chasing after you manage to catch you, your Suspicion will raise even higher.");
+draw_text(683, 475, "Keep an eye on your suspicion level.");
+draw_text(683, 500, "If it gets too high, the police will be convinced you are the Crowbar Maniac and arrest you.");
+draw_text(683, 525, "Avoid the killer at all costs, until you can find enough evidence to lock him up.");
+draw_text(683, 550, "He will strike again if he gets a chance!");
 
 draw_set_font(font_1);
 for (i = 0; i < array_length(button); i++){
