@@ -5,7 +5,25 @@ if (can_hurt && state == "chase_player"){
 	audio_sound_pitch(hurt, random_range(0.8,1.2))
 	obj_player.alarm[0] =  room_speed / 60
 	audio_play_sound(hurt, 1, 0)
-	path_start(cop_path_1, 2, path_action_reverse, true)
+	var cop_path = path_add();
+	randomize()
+	var rand = irandom(2)
+	while (last_rand == rand)
+		rand = irandom(2)
+	last_rand = rand
+	if (rand == 0){
+		mp_potential_path(cop_path , obj_cop1_goal1.x, obj_cop1_goal1.y, 2,path_size, false)
+		path_start(cop_path, 2, path_action_stop, true);
+	}
+	else if (rand == 1){
+		mp_potential_path(cop_path , obj_cop1_goal2.x, obj_cop1_goal2.y, 2,path_size, false)
+		path_start(cop_path, 2, path_action_stop, true);
+	}
+	else if (rand == 2){
+		mp_potential_path(cop_path , obj_cop1_goal3.x, obj_cop1_goal3.y, 2,path_size, false)
+		path_start(cop_path, 2, path_action_stop, true);
+	}
+
 }
 
 if (global.char_health <= 0){
