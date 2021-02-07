@@ -1,5 +1,5 @@
 if (can_hurt && state == "chase_player"){
-	global.char_health -= 20
+	global.player_sus += 20
 	alarm[1] = room_speed
 	can_hurt = false
 	audio_sound_pitch(hurt, random_range(0.8,1.2))
