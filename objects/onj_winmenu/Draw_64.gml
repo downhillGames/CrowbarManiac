@@ -5,8 +5,8 @@ draw_set_color(c_yellow);
 
 draw_text(683, 150, "You won!");
 
-draw_set_font(font_1);
-draw_text(683, 300, "You proved who the killer really was!");
+draw_set_font(font_3);
+draw_text(683, 400, "You proved who the killer really was!");
 
 	
 for (i = 0; i < array_length(button); i++){

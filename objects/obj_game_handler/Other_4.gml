@@ -17,6 +17,7 @@ button[2] = "Quit Game"
 menu_index = 0;
 last_selected = 0;
 
+/* old cloak code
 randX = irandom_range(21, 1477)
 randY = irandom_range(33, 617)
 while(!place_free(randX, randY)){
@@ -24,6 +25,6 @@ while(!place_free(randX, randY)){
 	randY = irandom_range(33, 617)
 }
 instance_create_depth(randX,randY,0,obj_cloak)
-
+*/
 audio_play_sound(game_music, 1, true);
 alarm[0] = room_speed / 1.5

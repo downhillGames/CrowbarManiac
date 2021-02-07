@@ -5,11 +5,11 @@ draw_set_color(c_yellow);
 
 draw_text(683, 150, "Game Over");
 
-draw_set_font(font_1);
+draw_set_font(font_3);
 if (global.death_cause == 1)
-	draw_text(683, 300, "You were too suspicious");
+	draw_text(683, 400, "You were too suspicious");
 else if (global.death_cause == 2)
-	draw_text(683, 300, "The killer found you and you died");
+	draw_text(683, 400, "The killer found you and you died");
 	
 for (i = 0; i < array_length(button); i++){
 	
