@@ -22,7 +22,7 @@ for (i=1; i < global.player_sus; i++){
 if (global.paused){
 	draw_sprite_ext(pause_menu, 0,200,-50, 15, 15, 0, c_white , 1);
 	draw_set_halign(fa_center);
-	draw_set_font(font_1);
+	draw_set_font(font_3);
 	for (i = 0; i < array_length(button); i++){
 		if (menu_index == i){
 			draw_set_color(c_red);

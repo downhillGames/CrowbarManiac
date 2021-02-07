@@ -43,7 +43,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 					audio_play_sound(alert_noise, 1, 0)
 					state = "chase_player"
 					sprite_index =	spr_cop_alert_right;
-					alarm[0] = room_speed / 45
+					alarm[0] = room_speed / global.ai_speed
 				}
 			}
 	//}

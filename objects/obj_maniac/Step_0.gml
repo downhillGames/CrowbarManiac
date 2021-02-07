@@ -1,9 +1,3 @@
-if collision_line(x, y, obj_player.x, obj_player.y, obj_wall, 1, 0){
-	visible = false
-}
-else{
-	visible = true
-}
 
 if (state == "chase_player"){
 	xPrev = x - xprevious
@@ -47,7 +41,7 @@ if (state == "follow_path"){
 if (distance_to_object(obj_player) < 150){
 	if (state == "follow_path"){
 			path_end();
-			alarm[0] = room_speed / 45
+			alarm[0] = room_speed / global.ai_speed
 			state = "chase_player"
 		}
 	}

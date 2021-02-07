@@ -43,15 +43,15 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 					state = "chase_player"
 					audio_play_sound(alert_noise, 1, 0)
 					sprite_index =	spr_cop_alert_right;
-					alarm[0] = room_speed / 45
+					alarm[0] = room_speed / global.ai_speed
 				}
 			}
 	//}
 }
 else {
 	if (state == "chase_player"){
-		state = "follow_path"
 		audio_play_sound(not_alert, 1, 0)
+		state = "follow_path"
 		sprite_index =	spr_cop_right;
 		var cop_path = path_add();
 		randomize()
@@ -60,15 +60,15 @@ else {
 			rand = irandom(2)
 		last_rand = rand
 		if (rand == 0){
-			mp_potential_path(cop_path , obj_cop1_goal1.x, obj_cop1_goal1.y, 2,path_size, false)
+			mp_potential_path(cop_path , obj_cop2_goal1.x, obj_cop2_goal1.y, 2,path_size, false)
 			path_start(cop_path, 2, path_action_stop, true);
 		}
 		else if (rand == 1){
-			mp_potential_path(cop_path , obj_cop1_goal2.x, obj_cop1_goal2.y, 2,path_size, false)
+			mp_potential_path(cop_path , obj_cop2_goal2.x, obj_cop2_goal2.y, 2,path_size, false)
 			path_start(cop_path, 2, path_action_stop, true);
 		}
 		else if (rand == 2){
-			mp_potential_path(cop_path , obj_cop1_goal3.x, obj_cop1_goal3.y, 2,path_size, false)
+			mp_potential_path(cop_path , obj_cop2_goal3.x, obj_cop2_goal3.y, 2,path_size, false)
 			path_start(cop_path, 2, path_action_stop, true);
 		}
 

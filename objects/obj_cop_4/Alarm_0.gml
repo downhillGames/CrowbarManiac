@@ -20,5 +20,5 @@ if (state == "chase_player"){
 	}
 	
 	
-	alarm[0] = room_speed / 45
+	alarm[0] = room_speed / global.ai_speed
 }
