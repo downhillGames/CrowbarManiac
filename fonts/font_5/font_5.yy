@@ -131,7 +131,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "font_4",
+  "name": "font_5",
   "tags": [],
   "resourceType": "GMFont",
 }
