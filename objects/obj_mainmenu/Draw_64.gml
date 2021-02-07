@@ -21,3 +21,9 @@ for (i = 0; i < array_length(button); i++){
 	draw_text(menu_x, menu_y+ (button_h * i), button[i]);
 
 }
+
+draw_set_color(c_yellow);
+draw_set_font(font_4);
+draw_text(275, 700, "Crowbar Maniac");
+draw_text(1075, 700, "Non-Alert Cop");
+draw_text(1200, 700, "Alert Cop");
