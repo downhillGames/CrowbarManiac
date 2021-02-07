@@ -35,8 +35,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Cops",
+    "path": "folders/Objects/Cops.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cop_4",

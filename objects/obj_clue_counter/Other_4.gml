@@ -2,12 +2,12 @@ global.numb_of_clues = 0;
 global.char_health = 100;
 global.death_cause = 1;
 global.cop_view_distance = 200;
-global.door_distance = 30;
+global.door_distance = 50;
 global.player_sus = 0;
 global.paused = false
 
 button_h = 75;
-button[0] = "Main Menu"
+button[0] = "Continue"
 button[1] = "Instructions"
 button[2] = "Quit Game"
 

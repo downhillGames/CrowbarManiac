@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "cop_goals",
+    "path": "folders/Objects/cop_goals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cop4_goal2",

@@ -40,6 +40,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 					point_distance(door_3.x, door_3.y, obj_player.x, obj_player.y) <  global.door_distance  || point_distance(door_4.x, door_4.y, obj_player.x, obj_player.y) < global.door_distance  ||
 					point_distance(door_5.x, door_5.y, obj_player.x, obj_player.y) <  global.door_distance  ){
 					path_end()
+					audio_play_sound(alert_noise, 1, 0)
 					state = "chase_player"
 					sprite_index =	spr_cop_alert_right;
 					alarm[0] = room_speed / 45
@@ -50,6 +51,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 else {
 	if (state == "chase_player"){
 		state = "follow_path"
+		audio_play_sound(not_alert, 1, 0)
 		sprite_index =	spr_cop_right;
 		var cop_path = path_add();
 		randomize()
