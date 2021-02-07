@@ -37,8 +37,9 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 	//if collision_line(x,y,obj_player,obj_player.y,obj_wall,1,0){
 			if (state == "follow_path"){
 				if (point_distance(door_1.x, door_1.y, obj_player.x, obj_player.y) < global.door_distance  || point_distance(door_2.x, door_2.y, obj_player.x, obj_player.y) < global.door_distance  ||
-					point_distance(door_3.x, door_3.y, obj_player.x, obj_player.y) <  global.door_distance  || point_distance(door_4.x, door_4.y, obj_player.x, obj_player.y) < global.door_distance  ||
-					point_distance(door_5.x, door_5.y, obj_player.x, obj_player.y) <  global.door_distance  ){
+					point_distance(door_3.x, door_3.y, obj_player.x, obj_player.y) <  global.door_distance || point_distance(door_4.x, door_4.y, obj_player.x, obj_player.y) < global.door_distance  ||
+					point_distance(door_5.x, door_5.y, obj_player.x, obj_player.y) <  global.door_distance ||  point_distance(door_6.x, door_6.y, obj_player.x, obj_player.y) <  global.door_distance ||
+					point_distance(door_7.x, door_7.y, obj_player.x, obj_player.y) <  global.door_distance ){
 					path_end()
 					state = "chase_player"
 					audio_play_sound(alert_noise, 1, 0)
