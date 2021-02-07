@@ -7,6 +7,7 @@ global.player_sus = 0;
 global.paused = false
 global.ai_speed = 60
 global.sus_level = 1
+global.good_clues = 0
 
 button_h = 75;
 button[0] = "Continue"

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_connor_clue",
-    "path": "sprites/spr_connor_clue/spr_connor_clue.yy",
+    "name": "spr_bad_clue",
+    "path": "sprites/spr_bad_clue/spr_bad_clue.yy",
   },
   "solid": false,
   "visible": true,
