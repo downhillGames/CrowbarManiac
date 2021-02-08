@@ -14,7 +14,7 @@ else if (global.cloak < 1 && rand == 2){
 	instance_create_depth(x,y,0,obj_cloak)
 	global.cloak += 1
 }
-else if (global.good_clues < 4){
+else if (global.cloak == 1 && (rand == 2 || rand == 3)   && global.good_clues < 4){
 	instance_create_depth(x,y,0,obj_connor_clue)
 	global.good_clues += 1
 }

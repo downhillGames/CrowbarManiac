@@ -1,5 +1,5 @@
 var cop_path = path_add();
-path_size = 20
+path_size = global.cop_path_size
 randomize()
 last_direction = 1
 var rand = irandom(2)

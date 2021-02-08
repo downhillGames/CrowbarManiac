@@ -55,7 +55,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < 10 && state == "chase_pla
 		y=yTarget
 	}
 }
-else if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance){
+else if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance && can_hurt){
 	//if collision_line(x,y,obj_player,obj_player.y,obj_wall,1,0){
 			if (state == "follow_path"){
 				if (point_distance(door_1.x, door_1.y, obj_player.x, obj_player.y) < global.door_distance  || point_distance(door_2.x, door_2.y, obj_player.x, obj_player.y) < global.door_distance  ||
