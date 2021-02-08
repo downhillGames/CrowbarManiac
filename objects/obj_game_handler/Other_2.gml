@@ -1,6 +1,6 @@
 global.been_through_main = false;
 global.good_clues = 0
-global.rand_for_clues = 2
+global.rand_for_clues = 4
 global.cloak = 0
 
 global.rmTownGrid = mp_grid_create(0,0, room_width, room_height, room_width / 40,  room_height / 40 )

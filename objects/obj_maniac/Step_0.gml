@@ -59,7 +59,7 @@ if (distance_to_object(obj_player) < 15 && state == "chase_player"){
 		y=yTarget
 	}
 }
-else if (distance_to_object(obj_player) < 200){
+else if (distance_to_object(obj_player) < 200 && can_hurt){
 	if (state == "follow_path"){
 			path_end();
 			alarm[0] = room_speed / global.ai_speed
