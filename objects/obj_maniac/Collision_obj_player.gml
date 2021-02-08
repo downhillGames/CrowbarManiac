@@ -1,5 +1,6 @@
 if (can_hurt){
 	global.char_health -= 20
+	state = "follow_path"
 	alarm[1] = room_speed
 	can_hurt = false
 	obj_player.alarm[0] =  room_speed / 60

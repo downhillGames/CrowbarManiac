@@ -1,4 +1,5 @@
 if (can_hurt && state == "chase_player"){
+	state = "follow_path"
 	global.player_sus += 20
 	alarm[1] = room_speed
 	can_hurt = false

@@ -3,7 +3,7 @@ draw_set_halign(fa_left);
 draw_set_color(c_white);
 draw_text(0,30, string(global.numb_of_clues) + " of 4 clues found");
 draw_text(0,70, string(global.char_health) + "% health");
-draw_text(600,0, " Suspect Meter");
+draw_text(550,0, " Suspect Meter");
 
 draw_set_color(c_white);
 
@@ -30,7 +30,11 @@ if (global.paused){
 		else{
 			draw_set_color(c_yellow);
 		}
-		draw_text(700, 200+ (button_h * i), button[i]);
+		draw_text(675, 200+ (button_h * i), button[i]);
 
 	}
+	draw_set_color(c_yellow);
+	draw_text(675, 450, "Use arrow keys to");
+	draw_text(675, 485, "highlight option and");
+	draw_text(675, 520, "'Enter' to select.");
 }

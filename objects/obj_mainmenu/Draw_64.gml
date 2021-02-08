@@ -7,7 +7,7 @@ draw_text(683, 150, "Crowbar Maniac");
 
 draw_set_font(font_3);
 draw_text(683, 350, "Use arrow keys to highlight option, and 'Enter' to select.");
-
+draw_text(683, 400, "Press 'P' to pause during gameplay");
 draw_set_font(font_1);
 for (i = 0; i < array_length(button); i++){
 	

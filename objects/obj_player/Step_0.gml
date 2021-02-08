@@ -1,4 +1,4 @@
-var pixelsPerSecond = 100;
+var pixelsPerSecond = 150;
 var timePassed = delta_time / 1000000;
 var pixelsThisFrame = pixelsPerSecond * timePassed;
 audio_listener_set_position(0,x,y, 0);

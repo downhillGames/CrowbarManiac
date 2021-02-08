@@ -1,10 +1,10 @@
 if (state == "chase_player"){
-	xPrev = x - xprevious
-
-	if (xPrev > 0)
+	if (direction >= 306 || direction <= 45)
 		xDir = 1
-	else if (xPrev < 0)
+	else if (direction > 136 && direction <= 225)
 		xDir = -1
+	else
+		xDir = last_direction
 		
 	if (xDir != last_direction && xDir!= 0)
 		last_direction = xDir
@@ -33,13 +33,35 @@ if (state == "follow_path"){
 
 }
 
-if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance){
+if (point_distance(x, y, obj_player.x, obj_player.y) < 10 && state == "chase_player"){
+	path_end()
+	if obj_player.x > x{
+		xTarget = x+1
+	}
+	else if obj_player.x < x{
+		xTarget = x-1
+	}
+	if obj_player.y > y{
+		yTarget = y+1
+	}
+	else if obj_player.y < y{
+		yTarget = y-1
+	}
+	
+	if !(place_meeting(xTarget, y, obj_wall)){
+		x=xTarget
+		}
+	if !(place_meeting(x, yTarget, obj_wall)){
+		y=yTarget
+	}
+}
+else if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance){
 	//if collision_line(x,y,obj_player,obj_player.y,obj_wall,1,0){
 			if (state == "follow_path"){
 				if (point_distance(door_1.x, door_1.y, obj_player.x, obj_player.y) < global.door_distance  || point_distance(door_2.x, door_2.y, obj_player.x, obj_player.y) < global.door_distance  ||
 					point_distance(door_3.x, door_3.y, obj_player.x, obj_player.y) <  global.door_distance || point_distance(door_4.x, door_4.y, obj_player.x, obj_player.y) < global.door_distance  ||
 					point_distance(door_5.x, door_5.y, obj_player.x, obj_player.y) <  global.door_distance ||  point_distance(door_6.x, door_6.y, obj_player.x, obj_player.y) <  global.door_distance ||
-					point_distance(door_7.x, door_7.y, obj_player.x, obj_player.y) <  global.door_distance ){
+					point_distance(door_7.x, door_7.y, obj_player.x, obj_player.y) <  global.door_distance || point_distance(door_8.x, door_8.y, obj_player.x, obj_player.y) <  global.door_distance){
 					path_end()
 					state = "chase_player"
 					audio_play_sound(alert_noise, 1, 0)
@@ -51,6 +73,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < global.cop_view_distance)
 }
 else {
 	if (state == "chase_player"){
+		path_end()
 		state = "follow_path"
 		audio_play_sound(not_alert, 1, 0)
 		sprite_index =	spr_cop_right;

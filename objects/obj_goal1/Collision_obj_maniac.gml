@@ -1,0 +1,1 @@
+obj_maniac.alarm[2] = room_speed / 60
