@@ -37,7 +37,7 @@ if (state == "follow_path"){
 }
 
 
-if (point_distance(x, y, obj_player.x, obj_player.y) < 10 && state == "chase_player"){
+if (distance_to_object(obj_player) < 15 && state == "chase_player"){
 	path_end()
 	if obj_player.x > x{
 		xTarget = x+1
@@ -59,7 +59,7 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < 10 && state == "chase_pla
 		y=yTarget
 	}
 }
-else if (distance_to_object(obj_player) < 100){
+else if (distance_to_object(obj_player) < 200){
 	if (state == "follow_path"){
 			path_end();
 			alarm[0] = room_speed / global.ai_speed

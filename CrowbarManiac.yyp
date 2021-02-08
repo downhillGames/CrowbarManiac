@@ -70,6 +70,7 @@
     {"id":{"name":"door_2","path":"objects/door_2/door_2.yy",},"order":1,},
     {"id":{"name":"obj_cop4_goal1","path":"objects/obj_cop4_goal1/obj_cop4_goal1.yy",},"order":9,},
     {"id":{"name":"clue","path":"sounds/clue/clue.yy",},"order":7,},
+    {"id":{"name":"bad_clue","path":"sounds/bad_clue/bad_clue.yy",},"order":8,},
     {"id":{"name":"obj_potential_clue7","path":"objects/obj_potential_clue7/obj_potential_clue7.yy",},"order":6,},
     {"id":{"name":"font_3","path":"fonts/font_3/font_3.yy",},"order":2,},
     {"id":{"name":"cop_path_1","path":"paths/cop_path_1/cop_path_1.yy",},"order":2,},

@@ -9,6 +9,9 @@ global.ai_speed = 60
 global.sus_level = 1
 global.good_clues = 0
 
+global.good_clues = 0
+global.cloak = 0
+
 button_h = 75;
 button[0] = "Continue"
 button[1] = "Instructions"

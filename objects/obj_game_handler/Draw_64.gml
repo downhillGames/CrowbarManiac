@@ -30,7 +30,11 @@ if (global.paused){
 		else{
 			draw_set_color(c_yellow);
 		}
-		draw_text(700, 200+ (button_h * i), button[i]);
+		draw_text(675, 200+ (button_h * i), button[i]);
 
 	}
+	draw_set_color(c_yellow);
+	draw_text(675, 450, "Use arrow keys to");
+	draw_text(675, 485, "highlight option and");
+	draw_text(675, 520, "'Enter' to select.");
 }
