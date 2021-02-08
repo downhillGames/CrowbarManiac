@@ -1,11 +1,11 @@
 
 if (state == "chase_player"){
-	xPrev = x - xprevious
-
-	if (xPrev > 0)
+	if (direction >= 306 || direction <= 45)
 		xDir = 1
-	else if (xPrev < 0)
+	else if (direction > 136 && direction <= 225)
 		xDir = -1
+	else
+		xDir = last_direction
 		
 	if (xDir != last_direction && xDir!= 0)
 		last_direction = xDir
@@ -37,8 +37,29 @@ if (state == "follow_path"){
 }
 
 
-
-if (distance_to_object(obj_player) < 150){
+if (point_distance(x, y, obj_player.x, obj_player.y) < 10 && state == "chase_player"){
+	path_end()
+	if obj_player.x > x{
+		xTarget = x+1
+	}
+	else if obj_player.x < x{
+		xTarget = x-1
+	}
+	if obj_player.y > y{
+		yTarget = y+1
+	}
+	else if obj_player.y < y{
+		yTarget = y-1
+	}
+	
+	if !(place_meeting(xTarget, y, obj_wall)){
+		x=xTarget
+		}
+	if !(place_meeting(x, yTarget, obj_wall)){
+		y=yTarget
+	}
+}
+else if (distance_to_object(obj_player) < 100){
 	if (state == "follow_path"){
 			path_end();
 			alarm[0] = room_speed / global.ai_speed
@@ -48,6 +69,7 @@ if (distance_to_object(obj_player) < 150){
 else {
 	if (state == "chase_player"){
 		state = "follow_path"
+		path_end();
 		randomize()
 		var rand = irandom(3)
 		while (last_rand == rand)
